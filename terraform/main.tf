@@ -5,6 +5,10 @@ terraform {
       version = "4.4.0"
     }
   }
+  backend "gcs" {
+    bucket = "k8s-workspace-tf-state"
+    prefix = "dev"
+  }
 }
 
 provider "google" {
